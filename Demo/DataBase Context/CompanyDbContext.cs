@@ -20,8 +20,7 @@ namespace Demo.DataBase_Context
         }
 
         public DbSet<Employee> Employees { get; set; }
-        public DbSet<Department> Departments { get; set; }
-        public DbSet<Customer> Customers { get; set; }
+        
         
 
     }
