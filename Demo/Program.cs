@@ -1,10 +1,13 @@
-﻿namespace Demo
+﻿using Demo.DataBase_Context;
+
+namespace Demo
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            using CompanyDbContext dbContext = new CompanyDbContext();
+
         }
     }
 }
