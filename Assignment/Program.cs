@@ -1,10 +1,12 @@
-﻿namespace Assignment
+﻿using Assignment.DatabaseContext;
+
+namespace Assignment
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+           //using ITIDbContext dbContext= new ITIDbContext();
         }
     }
 }
