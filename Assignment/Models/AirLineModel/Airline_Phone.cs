@@ -8,5 +8,7 @@ namespace Assignment.Models.AirLineModel
 {
     internal class Airline_Phone
     {
+        public int AL_Id {  get; set; }
+        public string? Phone { get; set; }
     }
 }

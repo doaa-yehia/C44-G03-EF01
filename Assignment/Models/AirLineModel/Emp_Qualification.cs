@@ -8,5 +8,7 @@ namespace Assignment.Models.AirLineModel
 {
     internal class Emp_Qualification
     {
+        public int Emp_Id {  get; set; }
+        public string? Qualifications {  get; set; }
     }
 }

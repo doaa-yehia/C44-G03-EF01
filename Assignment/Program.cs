@@ -7,6 +7,7 @@ namespace Assignment
         static void Main(string[] args)
         {
            //using ITIDbContext dbContext= new ITIDbContext();
+           using AirlineDbContext dbContext = new AirlineDbContext();
         }
     }
 }

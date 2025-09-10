@@ -20,7 +20,9 @@ namespace Assignment.DatabaseContext
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Airline_Phone>().HasKey(AP => new { AP.AL_Id, AP.Phone });
+            modelBuilder.Entity<Emp_Qualification>().HasKey(EQ => new { EQ.Emp_Id, EQ.Qualifications });
+            modelBuilder.Entity<Aircraft_Route>().HasKey(AR => new { AR.AC_ID, AR.Route_Id,AR.Departure });
         }
         public DbSet<Aircraft> Aircrafts {  get; set; }
         public DbSet<Aircraft_Route> Aircraft_Routes {  get; set; }
