@@ -1,5 +1,6 @@
 ﻿using Assignment.DatabaseContext;
 using Assignment.Models.AirLineModel;
+using Microsoft.EntityFrameworkCore;
 
 namespace Assignment
 {
@@ -7,8 +8,8 @@ namespace Assignment
     {
         static void Main(string[] args)
         {
-           //using ITIDbContext dbContext= new ITIDbContext();
-           using AirlineDbContext dbContext = new AirlineDbContext();
+            //using ITIDbContext dbContext= new ITIDbContext();
+            using AirlineDbContext dbContext = new AirlineDbContext();
 
             #region Apply CRUD Operations
 
@@ -86,9 +87,9 @@ namespace Assignment
             #region d
             ///Select all employees who work in "EgyptAir".
 
-            //var EgyAirline = dbContext.Airlines.FirstOrDefault(A => A.Name == "EgyptAir");
+            //var EgyAirline = dbContext.Airlines.Include(a => a.Employees).FirstOrDefault(A => A.Name == "EgyptAir");
 
-            //if(EgyAirline is not null)
+            //if (EgyAirline is not null)
             //{
             //    foreach (var Emp in EgyAirline.Employees)
             //    {
@@ -122,7 +123,7 @@ namespace Assignment
             #region e
             ///Show all transactions (id, description, amount) recorded by "EgyptAir".
 
-            //var EgyAirline = dbContext.Airlines.FirstOrDefault(A => A.Name == "EgyptAir");
+            //var EgyAirline = dbContext.Airlines.Include(a => a.Transactions).FirstOrDefault(A => A.Name == "EgyptAir");
 
             //if (EgyAirline is not null)
             //{
@@ -138,6 +139,22 @@ namespace Assignment
 
             #endregion
 
+            #region f
+            /// Get the total number of employees working in each airline.
+
+            //var EmployeeCount = dbContext.Employees.Include(e => e.EmpAirline)
+            //                                       .GroupBy(e => e.EmpAirline.Name)
+            //                                       .Select(g => new
+            //                                       {
+            //                                           AirlineName = g.Key,
+            //                                           Count = g.Count()
+            //                                       }).ToList();
+
+            //foreach (var item in EmployeeCount)
+            //{
+            //    Console.WriteLine($"AirlineName={item.AirlineName}/nEmpCount= {item.Count}");
+            //}
+            #endregion
 
 
             #endregion
