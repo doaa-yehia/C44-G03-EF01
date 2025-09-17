@@ -12,7 +12,7 @@ namespace Assignment.Models.AirLineModel
         public int Id { get; set; }
         public string? Name { get; set; }
         public string? Address { get; set; }
-        public int Cont_Person {  get; set; }
+        public string? Cont_Person {  get; set; }
 
         [InverseProperty (nameof(Employee.EmpAirline))]
         public ICollection<Employee> Employees { get; set; } = new HashSet<Employee>();
