@@ -13,7 +13,7 @@ namespace Assignment.Models.AirLineModel
         public string? Description { get; set; }
         [Column(TypeName ="decimal(12,4)")]
         public decimal Amount { get; set; }
-        public DateTime Date {  get; set; }
+        public DateTime? Date {  get; set; }
 
         [ForeignKey (nameof(TransAirline))]
         public int AL_Id {  get; set; }

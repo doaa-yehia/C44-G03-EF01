@@ -55,7 +55,31 @@ namespace Assignment
             //{
             //    Console.WriteLine("Failed");
             //}
-           
+
+
+            #endregion
+
+            #region c
+            ///Record a new transaction
+
+           // var EgyAirline = dbContext.Airlines.FirstOrDefault(A => A.Name == "EgyptAir");
+
+           //if(EgyAirline is not null )
+           // {
+           //     var Trans01 = new Transaction()
+           //     {
+           //         Amount = 50000,
+           //         Description = "Tickets",
+           //         TransAirline = EgyAirline
+           //     };
+           //     dbContext.Transactions.Add(Trans01);
+           //     dbContext.SaveChanges();
+           //     Console.WriteLine("Done");
+           // }
+           // else
+           // {
+           //     Console.WriteLine("Failed");
+           // }
 
             #endregion
 
