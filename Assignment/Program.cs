@@ -17,18 +17,18 @@ namespace Assignment
 
             #region a
 
-            var Airline01 = new Airline()
-            {
-                Name = "EgyptAir",
-                Cont_Person = "Ahmed Ali",
-                Airline_Phones = new List<Airline_Phone>()
-                {
-                    new Airline_Phone{Phone="0123456789"},
-                    new Airline_Phone{Phone="0113654789"}
-                },
-                Address = "Cairo"
+            //var Airline01 = new Airline()
+            //{
+            //    Name = "EgyptAir",
+            //    Cont_Person = "Ahmed Ali",
+            //    Airline_Phones = new List<Airline_Phone>()
+            //    {
+            //        new Airline_Phone{Phone="0123456789"},
+            //        new Airline_Phone{Phone="0113654789"}
+            //    },
+            //    Address = "Cairo"
 
-            };
+            //};
             //dbContext.Airlines.Add(Airline01);
             //dbContext.SaveChanges(); 
 
@@ -178,9 +178,9 @@ namespace Assignment
 
             #region h
             ///Delete all transactions older than 2020.
-            
+
             //DateTime targetDate = new DateTime(2020, 1, 1);
-            //var trasOrder2020 = dbContext.Transactions.Where(A => A.Date<targetDate).ToList();
+            //var trasOrder2020 = dbContext.Transactions.Where(A => A.Date < targetDate).ToList();
 
             //if (trasOrder2020.Any())
             //{
@@ -188,7 +188,8 @@ namespace Assignment
             //    Console.WriteLine(dbContext.Entry<Transaction>(trasOrder2020[0]).State); //Deleted
 
             //    dbContext.SaveChanges();
-            //    Console.WriteLine(dbContext.Entry<Transaction>(trasOrder2020[0]).State); //unchanged
+            //    Console.WriteLine(dbContext.Entry<Transaction>(trasOrder2020[0]).State); //Detached
+
 
             //}
             //else
@@ -198,6 +199,29 @@ namespace Assignment
 
             #endregion
 
+            #region i
+            ///Insert a new route from "Cairo" to "Dubai", 
+            ///classification "International", distance 2400 km.
+
+            //var Route01 = new Route()
+            //{
+            //    Origin = "Cairo",
+            //    Distination = "Dubai",
+            //    Classification = "International",
+            //    Distance = 2400
+            //};
+
+            //dbContext.Routes.Add(Route01);
+            //Console.WriteLine(dbContext.Entry<Route>(Route01).State); //Added
+
+            //dbContext.SaveChanges();
+
+            //Console.WriteLine(dbContext.Entry<Route>(Route01).State); //Unchanged
+
+
+            #endregion
+
+            
             #endregion
 
             #endregion
