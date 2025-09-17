@@ -119,6 +119,25 @@ namespace Assignment
             //}
             #endregion
 
+            #region e
+            ///Show all transactions (id, description, amount) recorded by "EgyptAir".
+
+            //var EgyAirline = dbContext.Airlines.FirstOrDefault(A => A.Name == "EgyptAir");
+
+            //if (EgyAirline is not null)
+            //{
+            //    foreach (var Trans in EgyAirline.Transactions)
+            //    {
+            //        Console.WriteLine($"Id ={Trans.Id}\nDiscription = {Trans.Description}\nAmount = {Trans.Amount}");
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Failed");
+            //}
+
+            #endregion
+
 
 
             #endregion
