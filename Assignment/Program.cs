@@ -62,25 +62,61 @@ namespace Assignment
             #region c
             ///Record a new transaction
 
-           // var EgyAirline = dbContext.Airlines.FirstOrDefault(A => A.Name == "EgyptAir");
+            // var EgyAirline = dbContext.Airlines.FirstOrDefault(A => A.Name == "EgyptAir");
 
-           //if(EgyAirline is not null )
-           // {
-           //     var Trans01 = new Transaction()
-           //     {
-           //         Amount = 50000,
-           //         Description = "Tickets",
-           //         TransAirline = EgyAirline
-           //     };
-           //     dbContext.Transactions.Add(Trans01);
-           //     dbContext.SaveChanges();
-           //     Console.WriteLine("Done");
-           // }
-           // else
-           // {
-           //     Console.WriteLine("Failed");
-           // }
+            //if(EgyAirline is not null )
+            // {
+            //     var Trans01 = new Transaction()
+            //     {
+            //         Amount = 50000,
+            //         Description = "Tickets",
+            //         TransAirline = EgyAirline
+            //     };
+            //     dbContext.Transactions.Add(Trans01);
+            //     dbContext.SaveChanges();
+            //     Console.WriteLine("Done");
+            // }
+            // else
+            // {
+            //     Console.WriteLine("Failed");
+            // }
 
+            #endregion
+
+            #region d
+            ///Select all employees who work in "EgyptAir".
+
+            //var EgyAirline = dbContext.Airlines.FirstOrDefault(A => A.Name == "EgyptAir");
+
+            //if(EgyAirline is not null)
+            //{
+            //    foreach (var Emp in EgyAirline.Employees)
+            //    {
+            //        Console.WriteLine($"EmpName= {Emp.Name}");
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Failed");
+            //}
+
+            //another Way
+
+            //var EgyAirline = (from e in dbContext.Employees
+            //                 where e.EmpAirline.Name== "EgyptAir"
+            //                 select e).ToList();
+
+            //if (EgyAirline is not null)
+            //{
+            //    foreach (var Emp in EgyAirline)
+            //    {
+            //        Console.WriteLine($"EmpName= {Emp.Name}");
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Failed");
+            //}
             #endregion
 
 
