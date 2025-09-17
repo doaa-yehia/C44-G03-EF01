@@ -221,7 +221,47 @@ namespace Assignment
 
             #endregion
 
-            
+            #region j
+            ///Assign “Model01” aircraft to Route From "Cairo" to "Dubai".
+            ///With duration 4 hours, price 3000 LE
+
+            //var modelAircraft = dbContext.Aircrafts.FirstOrDefault(A => A.Model == "Model01");
+
+            //var Route01 = new Route()
+            //{
+            //    Origin = "Cairo",
+            //    Distination = "Dubai",
+            //    Classification = "International",
+            //    Distance = 100
+
+            //};
+            //var AirCraftRout = new Aircraft_Route()
+            //{
+            //    Price = 3000,
+            //    Route=Route01,
+            //    Departure=DateTime.Now,
+            //    Arrival=DateTime.Now.AddHours(4),
+            //    Num_Of_Pass=0
+
+            //};
+
+            //Route01.A_Aircrafts.Add(AirCraftRout);
+
+            //if (modelAircraft is not null)
+            //{
+            //    modelAircraft.ARoutes.Add(AirCraftRout);
+            //    dbContext.Add(Route01);
+
+            //    Console.WriteLine(dbContext.Entry<Route>(Route01).State); //Added
+
+            //    dbContext.SaveChanges();
+            //    Console.WriteLine(dbContext.Entry<Route>(Route01).State); //Unchanged
+
+            //}
+
+
+            #endregion
+
             #endregion
 
             #endregion

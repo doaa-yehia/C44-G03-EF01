@@ -22,5 +22,8 @@ namespace Assignment.Models.AirLineModel
 
         [InverseProperty (nameof(Airline.Aircrafts))]
         public Airline AL_Aircraft { get; set; } = null!;
+
+        [InverseProperty (nameof(Aircraft_Route.Aircraft))]
+        public ICollection<Aircraft_Route> ARoutes { get; set; } = new HashSet<Aircraft_Route>();
     }
 }
