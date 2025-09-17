@@ -14,7 +14,11 @@ namespace Assignment.Models.AirLineModel
         [Column(TypeName ="decimal(12,4)")]
         public decimal Amount { get; set; }
         public DateTime Date {  get; set; }
+
+        [ForeignKey (nameof(TransAirline))]
         public int AL_Id {  get; set; }
+        [InverseProperty (nameof(Airline.Transactions))]
+        public Airline TransAirline { get; set; } = null!;
 
 
     }

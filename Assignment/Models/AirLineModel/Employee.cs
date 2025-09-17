@@ -27,7 +27,12 @@ namespace Assignment.Models.AirLineModel
         public DateTime BD_Year {  get; set; }
         public DateTime BD_Month {  get; set; }
         public DateTime BD_Day {  get; set; }
+
+        [ForeignKey (nameof(EmpAirline))]
         public int AL_Id {  get; set; }
+
+        [InverseProperty (nameof(Airline.Employees))]
+        public Airline EmpAirline { get; set; } = null!;
 
     }
 }

@@ -4,6 +4,7 @@ using Assignment.DatabaseContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Assignment.Migrations.AirlineDb
 {
     [DbContext(typeof(AirlineDbContext))]
-    partial class AirlineDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250917113301_RelationBetweenEmployeeAndAirLine")]
+    partial class RelationBetweenEmployeeAndAirLine
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,8 +57,6 @@ namespace Assignment.Migrations.AirlineDb
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AL_Id");
 
                     b.ToTable("Aircrafts");
                 });
@@ -223,31 +224,7 @@ namespace Assignment.Migrations.AirlineDb
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AL_Id");
-
                     b.ToTable("Transactions");
-                });
-
-            modelBuilder.Entity("Assignment.Models.AirLineModel.Aircraft", b =>
-                {
-                    b.HasOne("Assignment.Models.AirLineModel.Airline", "AL_Aircraft")
-                        .WithMany("Aircrafts")
-                        .HasForeignKey("AL_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("AL_Aircraft");
-                });
-
-            modelBuilder.Entity("Assignment.Models.AirLineModel.Airline_Phone", b =>
-                {
-                    b.HasOne("Assignment.Models.AirLineModel.Airline", "AL_Phons")
-                        .WithMany("Airline_Phones")
-                        .HasForeignKey("AL_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("AL_Phons");
                 });
 
             modelBuilder.Entity("Assignment.Models.AirLineModel.Employee", b =>
@@ -261,26 +238,9 @@ namespace Assignment.Migrations.AirlineDb
                     b.Navigation("EmpAirline");
                 });
 
-            modelBuilder.Entity("Assignment.Models.AirLineModel.Transaction", b =>
-                {
-                    b.HasOne("Assignment.Models.AirLineModel.Airline", "TransAirline")
-                        .WithMany("Transactions")
-                        .HasForeignKey("AL_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("TransAirline");
-                });
-
             modelBuilder.Entity("Assignment.Models.AirLineModel.Airline", b =>
                 {
-                    b.Navigation("Aircrafts");
-
-                    b.Navigation("Airline_Phones");
-
                     b.Navigation("Employees");
-
-                    b.Navigation("Transactions");
                 });
 #pragma warning restore 612, 618
         }
