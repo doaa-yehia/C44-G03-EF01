@@ -16,20 +16,46 @@ namespace Assignment
 
             #region a
 
-            //var Airline01 = new Airline()
-            //{
-            //    Name = "EgyptAir",
-            //    Cont_Person = "Ahmed Ali",
-            //    Airline_Phones = new List<Airline_Phone>()
-            //    {
-            //        new Airline_Phone{Phone="0123456789"},
-            //        new Airline_Phone{Phone="0113654789"}
-            //    },
-            //    Address = "Cairo"
+            var Airline01 = new Airline()
+            {
+                Name = "EgyptAir",
+                Cont_Person = "Ahmed Ali",
+                Airline_Phones = new List<Airline_Phone>()
+                {
+                    new Airline_Phone{Phone="0123456789"},
+                    new Airline_Phone{Phone="0113654789"}
+                },
+                Address = "Cairo"
 
-            //};
+            };
             //dbContext.Airlines.Add(Airline01);
             //dbContext.SaveChanges(); 
+
+            #endregion
+
+            #region b
+
+            ///Add a new aircraft
+
+            //var EgyAirline = dbContext.Airlines.FirstOrDefault(A => A.Name == "EgyptAir");
+
+            //if(EgyAirline is not null)
+            //{
+            //    var Aircraft01 = new Aircraft()
+            //    {
+            //        Model = "Model01",
+            //        Capacity = 180,
+            //        AL_Aircraft = EgyAirline
+            //    };
+            //    dbContext.Aircrafts.Add(Aircraft01);
+            //    dbContext.SaveChanges();
+            //    Console.WriteLine("Done");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Failed");
+            //}
+           
 
             #endregion
 
