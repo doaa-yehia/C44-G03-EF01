@@ -156,6 +156,26 @@ namespace Assignment
             //}
             #endregion
 
+            #region g
+            ///Change the capacity of the “Model01” aircraft to 200.
+           
+            //var aircraft01 = dbContext.Aircrafts.FirstOrDefault(A => A.Model == "Model01");
+
+            //if (aircraft01 is not null)
+            //{
+            //    aircraft01.Capacity = 200;
+            //    Console.WriteLine(dbContext.Entry<Aircraft>(aircraft01).State); //Modified
+            //    dbContext.SaveChanges();
+            //    Console.WriteLine(dbContext.Entry<Aircraft>(aircraft01).State); //Unchanged
+
+
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Failed");
+            //}
+            #endregion
+
 
             #endregion
 
