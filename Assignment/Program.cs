@@ -158,7 +158,7 @@ namespace Assignment
 
             #region g
             ///Change the capacity of the “Model01” aircraft to 200.
-           
+
             //var aircraft01 = dbContext.Aircrafts.FirstOrDefault(A => A.Model == "Model01");
 
             //if (aircraft01 is not null)
@@ -176,6 +176,27 @@ namespace Assignment
             //}
             #endregion
 
+            #region h
+            ///Delete all transactions older than 2020.
+            
+            //DateTime targetDate = new DateTime(2020, 1, 1);
+            //var trasOrder2020 = dbContext.Transactions.Where(A => A.Date<targetDate).ToList();
+
+            //if (trasOrder2020.Any())
+            //{
+            //    dbContext.RemoveRange(trasOrder2020);
+            //    Console.WriteLine(dbContext.Entry<Transaction>(trasOrder2020[0]).State); //Deleted
+
+            //    dbContext.SaveChanges();
+            //    Console.WriteLine(dbContext.Entry<Transaction>(trasOrder2020[0]).State); //unchanged
+
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Failed");
+            //}
+
+            #endregion
 
             #endregion
 
